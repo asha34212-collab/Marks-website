@@ -1,0 +1,18 @@
+{
+  "name": "marks-strawberry-milkshake",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marks Dairy Strawberry Milk Shake — 3D Scroll Interactive Animation & High-Impact Storefront",
+  "scripts": {
+    "dev": "serve .",
+    "start": "serve ."
+  },
+  "keywords": [
+    "marks-dairy",
+    "strawberry-milkshake",
+    "scroll-animation",
+    "canvas-scrubber"
+  ],
+  "author": "Marks Dairy",
+  "license": "MIT"
+}

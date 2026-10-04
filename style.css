@@ -1,0 +1,142 @@
+/* ==========================================================================
+   MARKS STRAWBERRY MILK SHAKE — SMOOTH SCROLL 3D ANIMATION & STOREFRONT
+   Crisp High-DPI Canvas Rendering, Smooth Cross-fade, Zero Jitter
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-tone: #f2c0c1;
+  --berry-accent: #d63351;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg-tone);
+  overflow-x: hidden;
+  touch-action: pan-y;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Minimalist Preloader */
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--bg-tone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+}
+
+.loader-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(240px, 70vw);
+}
+
+.loader-bar-bg {
+  width: 100%;
+  height: 4px;
+  background: rgba(214, 51, 81, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.loader-bar-fill {
+  width: 0%;
+  height: 100%;
+  background: var(--berry-accent);
+  border-radius: 999px;
+  transition: width 0.1s linear;
+}
+
+.loader-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7a2b3b;
+  letter-spacing: 0.05em;
+}
+
+/* Fullscreen Canvas Stage */
+.canvas-stage {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-tone);
+}
+
+#hero-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: auto;
+  filter: contrast(1.03) saturate(1.02);
+  transform: translateZ(0);
+}
+
+/* Hero Title Overlay */
+#hero-title-overlay {
+  will-change: opacity, transform;
+  pointer-events: none;
+}
+
+/* Scroll Runway: provides optimal travel distance for smooth scrubbing */
+.scroll-runway {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 380vh; /* Smooth, natural scroll pacing */
+  pointer-events: auto;
+}
+
+/* Sticky Checkout Bar Transition */
+#sticky-checkout-bar {
+  transform: translateY(120%) translateZ(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#sticky-checkout-bar.visible {
+  transform: translateY(0) translateZ(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Enhanced Crisp Text & UI Typography Rendering */
+main, main * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Clean scrollbar behavior */
+html {
+  scrollbar-gutter: stable;
+}

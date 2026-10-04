@@ -1,0 +1,11 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local scripts & scratch files
+*.ps1
+!server.ps1
+
+# Vercel deployment metadata
+.vercel

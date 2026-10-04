@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#f2c0c1">
+  <meta name="description" content="MARKS Strawberry Milk Shake — Smooth Scroll 3D Animation & Fresh Dairy Storefront">
+  <title>MARKS Strawberry Milk Shake — Pure Strawberry Joy</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-container": "#de2c30",
+            "on-secondary-fixed-variant": "#544246",
+            "primary-container": "#da304e",
+            "on-secondary": "#ffffff",
+            "outline": "#8f6f70",
+            "on-primary-fixed-variant": "#920029",
+            "surface-tint": "#ba123a",
+            "on-tertiary-fixed-variant": "#930011",
+            "on-secondary-fixed": "#26181b",
+            "outline-variant": "#e3bebf",
+            "on-background": "#1b1b20",
+            "surface-container": "#f0edf4",
+            "surface-container-highest": "#e4e1e8",
+            "surface-variant": "#e4e1e8",
+            "on-surface": "#1b1b20",
+            "tertiary-fixed": "#ffdad6",
+            "on-surface-variant": "#4a383b",
+            "background": "#f2c0c1",
+            "surface": "#f2c0c1",
+            "on-primary-fixed": "#40000d",
+            "on-tertiary-container": "#fffbff",
+            "tertiary": "#ba081b",
+            "on-secondary-container": "#523e42",
+            "primary-fixed": "#ffdadb",
+            "on-primary-container": "#fffbff",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "primary": "#b70e38",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed": "#410003",
+            "secondary-fixed-dim": "#dac0c5",
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed-dim": "#ffb2b6",
+            "inverse-primary": "#ffb2b6",
+            "secondary-container": "#fce4e8",
+            "error-container": "#ffdad6",
+            "surface-container-low": "#eed8dc",
+            "secondary": "#523e42",
+            "inverse-surface": "#303035",
+            "secondary-fixed": "#f7dce1",
+            "surface-container-high": "#eae7ee",
+            "surface-bright": "#fbf8ff",
+            "on-tertiary": "#ffffff",
+            "inverse-on-surface": "#f2eff6",
+            "on-error-container": "#93000a",
+            "tertiary-fixed-dim": "#ffb3ad",
+            "surface-dim": "#dbd9e0"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#f2c0c1] font-sans text-[#1b1b20] flex flex-col min-h-screen">
+
+  <!-- Top Navigation Bar -->
+  <header class="fixed top-0 inset-x-0 z-40 bg-[#f2c0c1]/85 backdrop-blur-xl border-b border-white/40 shadow-[0_4px_24px_rgba(183,14,56,0.06)] transition-all">
+    <div class="max-w-[1900px] mx-auto h-20 sm:h-24 px-6 sm:px-12 flex items-center justify-between gap-6">
+      
+      <!-- Brand Identity -->
+      <a href="#" class="flex items-center gap-4 group">
+        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/95 shadow-[0_4px_16px_rgba(183,14,56,0.12)] flex items-center justify-center p-2 border-2 border-white group-hover:scale-105 transition-transform">
+          <img alt="Marks Dairy Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WsrtZ-6MIFiERcZQqnlSOlga9wM5bAVwUtKjYYlmxEcXGfYWJ7iu7d2vNhE-i-Fwktq64OCCa4KaHuk_EfJZsSXnnAqR6upLvzo4ZqH9aS8rGpWrWOdEZDfwGdwMVRzYEJ_afV4zSk_Rir-OiD9AoDixuxEZJmKMzJmGWlLw5E8HDXWM-XBu3TUymCz8ElmekCevXth9VZbXIsDFshjgEziNBjUOVC1IBO7cBn5EQTCLU9tYeaWVr52qji" />
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xs sm:text-sm font-black uppercase tracking-widest text-primary">Marks Dairy</span>
+          <span class="text-lg sm:text-xl font-black text-[#1b1b20] tracking-tight">Pure Strawberry</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 lg:gap-12">
+        <a href="#tasting-notes" class="text-base lg:text-lg font-bold text-[#1b1b20] hover:text-primary transition-colors">Tasting Notes</a>
+        <a href="#nutrition" class="text-base lg:text-lg font-bold text-[#1b1b20] hover:text-primary transition-colors">Nutrition</a>
+        <a href="#choose-pack" class="text-base lg:text-lg font-bold text-[#1b1b20] hover:text-primary transition-colors">Packs</a>
+        <a href="#specs" class="text-base lg:text-lg font-bold text-[#1b1b20] hover:text-primary transition-colors">Specs</a>
+        <a href="#reviews" class="text-base lg:text-lg font-bold text-[#1b1b20] hover:text-primary transition-colors">Reviews</a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <button aria-label="Search" class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-2xl bg-white/60 hover:bg-white text-[#1b1b20] transition-colors border border-white/80 shadow-sm">
+          <span class="material-symbols-outlined text-[24px]">search</span>
+        </button>
+
+        <a aria-label="Cart" href="#choose-pack" class="relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-2xl bg-white/60 hover:bg-white text-[#1b1b20] transition-colors border border-white/80 shadow-sm">
+          <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+          <span class="absolute -top-1.5 -right-1.5 min-w-[20px] h-[20px] px-1 bg-primary text-white text-[11px] font-black rounded-full flex items-center justify-center shadow-md">2</span>
+        </a>
+
+        <a href="#choose-pack" class="hidden sm:inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-primary text-white text-base font-black uppercase tracking-wider hover:bg-[#920029] active:scale-95 transition-all shadow-[0_8px_20px_rgba(183,14,56,0.3)]">
+          <span>Order Now</span>
+          <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Minimal Preloader (Kept EXACTLY as original) -->
+  <div id="loader" class="loader-overlay" role="status" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-bar-bg">
+        <div id="progress-bar" class="loader-bar-fill"></div>
+      </div>
+      <span id="loader-percent" class="loader-text">0%</span>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       SCROLL ANIMATION SECTION (Interactive 3D Milkshake Experience)
+       Kept EXACTLY untouched in dimensions, position, timing, and behavior
+       ===================================================================== -->
+  <div class="canvas-stage" id="canvas-stage">
+    <canvas id="hero-canvas"></canvas>
+  </div>
+
+  <!-- Hero Title Overlay (Fades out when user scrolls 30% of the scroll animation section) -->
+  <div id="hero-title-overlay" class="fixed top-28 sm:top-32 md:top-36 lg:top-40 inset-x-0 z-20 flex flex-col items-center justify-center text-center pointer-events-none px-4 select-none">
+    <h1 class="text-6xl sm:text-8xl md:text-9xl lg:text-[130px] xl:text-[150px] font-black uppercase tracking-tight text-[#1b1b20] leading-none drop-shadow-[0_4px_24px_rgba(255,255,255,0.75)]">
+      Marks
+    </h1>
+    <p class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider text-primary mt-3 sm:mt-4 md:mt-5 drop-shadow-[0_2px_14px_rgba(255,255,255,0.75)]">
+      Strawberry Cream
+    </p>
+  </div>
+
+  <!-- Scroll Runway for Smooth Scrubbing (Untouched) -->
+  <div class="scroll-runway" id="scroll-runway"></div>
+
+  <!-- =====================================================================
+       WEBSITE CONTENT SECTIONS (Positioned Below Scroll Animation)
+       Background matching the animation part (#f2c0c1) with DOUBLE 6X (12X) GIGANTIC SCALE
+       ===================================================================== -->
+  <main class="relative z-10 w-full bg-[#f2c0c1]">
+    <div class="flex flex-col w-full bg-[#f2c0c1]">
+
+      <!-- Tasting Notes: Why It's Irresistible -->
+      <section id="tasting-notes" class="w-full py-36 sm:py-52 md:py-64 bg-[#f2c0c1]">
+        <div class="max-w-[1900px] mx-auto px-6 sm:px-14 lg:px-24">
+          <div class="flex flex-col mb-24 sm:mb-36 max-w-6xl">
+            <span class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-[#a80f33] uppercase tracking-widest mb-6">The Sensory Delight</span>
+            <h2 class="text-7xl sm:text-8xl md:text-9xl lg:text-[160px] xl:text-[210px] font-black text-[#1b1b20] tracking-tight leading-[0.95]">Why It’s Irresistible</h2>
+            <p class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#4a2e33] mt-10 leading-[1.3] font-medium">Crafted like churned strawberry ice cream, bottled pure and fresh.</p>
+          </div>
+          <div class="space-y-14 sm:space-y-20">
+            <!-- Feature Card 1 -->
+            <div class="bg-white/95 backdrop-blur-md p-12 sm:p-20 lg:p-24 rounded-[3.5rem] sm:rounded-[5rem] shadow-[0_30px_90px_rgba(183,14,56,0.14)] flex flex-col md:flex-row items-start gap-12 sm:gap-16 border-4 sm:border-8 border-white">
+              <div class="w-36 h-36 sm:w-48 sm:h-48 rounded-[3rem] bg-secondary-container flex items-center justify-center text-primary shrink-0 shadow-inner">
+                <span class="material-symbols-outlined text-[80px] sm:text-[110px]" style="font-variation-settings: 'FILL' 1;">icecream</span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-[#1b1b20] mb-8 leading-tight">Velvety Ice Cream Texture</h3>
+                <p class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#3d2529] leading-[1.5] font-normal">
+                  Smooth, decadent mouthfeel that melts just like gourmet soft-serve blended fresh into chilled farm milk.
+                </p>
+              </div>
+            </div>
+            <!-- Feature Card 2 -->
+            <div class="bg-white/95 backdrop-blur-md p-12 sm:p-20 lg:p-24 rounded-[3.5rem] sm:rounded-[5rem] shadow-[0_30px_90px_rgba(183,14,56,0.14)] flex flex-col md:flex-row items-start gap-12 sm:gap-16 border-4 sm:border-8 border-white">
+              <div class="w-36 h-36 sm:w-48 sm:h-48 rounded-[3rem] bg-primary-fixed flex items-center justify-center text-primary shrink-0 shadow-inner">
+                <span class="material-symbols-outlined text-[80px] sm:text-[110px]" style="font-variation-settings: 'FILL' 1;">nest_heat_link_gen_3</span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-[#1b1b20] mb-8 leading-tight">Ripe Summer Strawberries</h3>
+                <p class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#3d2529] leading-[1.5] font-normal">
+                  Bursting with ripe berry notes, balanced with the delicate sweet-tart aroma of peak-season strawberries.
+                </p>
+              </div>
+            </div>
+            <!-- Feature Card 3 -->
+            <div class="bg-white/95 backdrop-blur-md p-12 sm:p-20 lg:p-24 rounded-[3.5rem] sm:rounded-[5rem] shadow-[0_30px_90px_rgba(183,14,56,0.14)] flex flex-col md:flex-row items-start gap-12 sm:gap-16 border-4 sm:border-8 border-white">
+              <div class="w-36 h-36 sm:w-48 sm:h-48 rounded-[3rem] bg-secondary-container flex items-center justify-center text-primary shrink-0 shadow-inner">
+                <span class="material-symbols-outlined text-[80px] sm:text-[110px]" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-[#1b1b20] mb-8 leading-tight">Smooth Milky Finish</h3>
+                <p class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#3d2529] leading-[1.5] font-normal">
+                  Wholesome ultra-heat treated pasteurized dairy leaves a clean, non-greasy, refreshing aftertaste.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nutrition & Health Benefits Breakdown -->
+      <section id="nutrition" class="w-full py-36 sm:py-52 md:py-64 bg-[#f2c0c1]">
+        <div class="max-w-[1900px] mx-auto px-6 sm:px-14 lg:px-24">
+          <div class="flex flex-col 2xl:flex-row 2xl:items-center justify-between gap-14 mb-24 sm:mb-36">
+            <div>
+              <span class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-[#a80f33] uppercase tracking-widest mb-6 block">Nourishment</span>
+              <h2 class="text-7xl sm:text-8xl md:text-9xl lg:text-[160px] xl:text-[210px] font-black text-[#1b1b20] tracking-tight leading-[0.95]">Nutritional Power</h2>
+            </div>
+            <!-- Interactive Serving Toggle -->
+            <div class="bg-white/80 backdrop-blur-md p-4 rounded-full flex items-center self-start 2xl:self-auto shadow-lg border-4 border-white">
+              <button class="px-14 py-7 sm:px-16 sm:py-8 rounded-full bg-primary text-on-primary text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black shadow-md transition-all" id="toggle-carton">200 ml</button>
+              <button class="px-14 py-7 sm:px-16 sm:py-8 rounded-full text-[#4a2e33] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black transition-all hover:text-primary" id="toggle-100ml">100 ml</button>
+            </div>
+          </div>
+
+          <!-- Nutrition Bento Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-20 sm:mb-28">
+            <!-- Stat 1 -->
+            <div class="bg-white/95 backdrop-blur-md p-12 sm:p-16 lg:p-18 rounded-[3.5rem] shadow-[0_30px_70px_rgba(183,14,56,0.12)] flex flex-col justify-between border-4 sm:border-8 border-white">
+              <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-10">
+                <span class="material-symbols-outlined text-[54px] sm:text-[72px]">format_h4</span>
+              </div>
+              <div>
+                <span class="text-3xl sm:text-4xl font-black uppercase tracking-wider text-[#5a2e35] block mb-4">Calcium</span>
+                <span class="text-7xl sm:text-8xl md:text-9xl lg:text-[130px] xl:text-[160px] font-black text-primary tracking-tight block leading-none" id="stat-calcium">300 mg</span>
+                <p class="text-3xl sm:text-4xl text-[#4a2e33] font-semibold mt-6 leading-snug">30% Daily Value for bones</p>
+              </div>
+            </div>
+            <!-- Stat 2 -->
+            <div class="bg-white/95 backdrop-blur-md p-12 sm:p-16 lg:p-18 rounded-[3.5rem] shadow-[0_30px_70px_rgba(183,14,56,0.12)] flex flex-col justify-between border-4 sm:border-8 border-white">
+              <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-10">
+                <span class="material-symbols-outlined text-[54px] sm:text-[72px]">fitness_center</span>
+              </div>
+              <div>
+                <span class="text-3xl sm:text-4xl font-black uppercase tracking-wider text-[#5a2e35] block mb-4">Protein</span>
+                <span class="text-7xl sm:text-8xl md:text-9xl lg:text-[130px] xl:text-[160px] font-black text-primary tracking-tight block leading-none" id="stat-protein">7.5 g</span>
+                <p class="text-3xl sm:text-4xl text-[#4a2e33] font-semibold mt-6 leading-snug">Wholesome energy fuel</p>
+              </div>
+            </div>
+            <!-- Stat 3 -->
+            <div class="bg-white/95 backdrop-blur-md p-12 sm:p-16 lg:p-18 rounded-[3.5rem] shadow-[0_30px_70px_rgba(183,14,56,0.12)] flex flex-col justify-between border-4 sm:border-8 border-white">
+              <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-10">
+                <span class="material-symbols-outlined text-[54px] sm:text-[72px]">health_and_safety</span>
+              </div>
+              <div>
+                <span class="text-3xl sm:text-4xl font-black uppercase tracking-wider text-[#5a2e35] block mb-4">Vitamin A &amp; D3</span>
+                <span class="text-7xl sm:text-8xl md:text-9xl lg:text-[130px] xl:text-[160px] font-black text-primary tracking-tight block leading-none" id="stat-vit">Fortified</span>
+                <p class="text-3xl sm:text-4xl text-[#4a2e33] font-semibold mt-6 leading-snug">Immunity &amp; vitality boost</p>
+              </div>
+            </div>
+            <!-- Stat 4 -->
+            <div class="bg-white/95 backdrop-blur-md p-12 sm:p-16 lg:p-18 rounded-[3.5rem] shadow-[0_30px_70px_rgba(183,14,56,0.12)] flex flex-col justify-between border-4 sm:border-8 border-white">
+              <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-10">
+                <span class="material-symbols-outlined text-[54px] sm:text-[72px]">energy_savings_leaf</span>
+              </div>
+              <div>
+                <span class="text-3xl sm:text-4xl font-black uppercase tracking-wider text-[#5a2e35] block mb-4">Calories</span>
+                <span class="text-7xl sm:text-8xl md:text-9xl lg:text-[130px] xl:text-[160px] font-black text-primary tracking-tight block leading-none" id="stat-calories">168 kcal</span>
+                <p class="text-3xl sm:text-4xl text-[#4a2e33] font-semibold mt-6 leading-snug">Balanced sweetness</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini Progress Bars for Macro Balance -->
+          <div class="bg-white/95 backdrop-blur-md p-12 sm:p-20 lg:p-24 rounded-[3.5rem] sm:rounded-[5rem] shadow-[0_30px_90px_rgba(183,14,56,0.14)] space-y-10 border-4 sm:border-8 border-white">
+            <div class="flex items-center justify-between text-4xl sm:text-5xl lg:text-6xl font-black">
+              <span class="text-[#1b1b20]">Daily Calcium Goal</span>
+              <span class="text-primary font-black">30% fulfilled</span>
+            </div>
+            <div class="w-full bg-[#fce4e8] rounded-full h-10 sm:h-16 overflow-hidden border-4 border-white">
+              <div class="bg-primary h-full rounded-full w-[30%]"></div>
+            </div>
+            <p class="text-3xl sm:text-4xl lg:text-5xl text-[#4a2e33] font-medium leading-relaxed">Recommended for active kids, teens, and adults on the move.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pack Options & Bundles -->
+      <section id="choose-pack" class="w-full py-36 sm:py-52 md:py-64 bg-[#f2c0c1]">
+        <div class="max-w-[1900px] mx-auto px-6 sm:px-14 lg:px-24">
+          <div class="flex flex-col mb-24 sm:mb-36 max-w-6xl">
+            <span class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-[#a80f33] uppercase tracking-widest mb-6">Stock Your Fridge</span>
+            <h2 class="text-7xl sm:text-8xl md:text-9xl lg:text-[160px] xl:text-[210px] font-black text-[#1b1b20] tracking-tight leading-[0.95]">Choose Your Pack</h2>
+            <p class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#4a2e33] mt-10 leading-[1.3] font-medium">Save more with our family fridge bundles and multipacks.</p>
+          </div>
+          <div class="space-y-12 sm:space-y-16">
+            <!-- Option 1: Single -->
+            <label class="pack-option relative flex items-center justify-between p-12 sm:p-20 lg:p-24 rounded-[3.5rem] bg-white/95 backdrop-blur-md cursor-pointer transition-all hover:bg-white border-4 sm:border-8 border-white hover:border-primary/40 shadow-[0_30px_70px_rgba(183,14,56,0.12)]">
+              <div class="flex items-center gap-10 sm:gap-16">
+                <input class="w-14 h-14 sm:w-20 sm:h-20 text-primary accent-primary cursor-pointer shrink-0" name="pack-bundle" type="radio" value="single"/>
+                <div>
+                  <h4 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#1b1b20]">Single 200ml Carton</h4>
+                  <p class="text-3xl sm:text-4xl lg:text-5xl text-[#4a2e33] font-medium leading-normal mt-3">Quick refreshment on-the-go</p>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-[#1b1b20] block">$1.49</span>
+                <span class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#5a2e35]">Standard pack</span>
+              </div>
+            </label>
+            <!-- Option 2: 6-Pack (Popular) -->
+            <label class="pack-option relative flex items-center justify-between p-12 sm:p-20 lg:p-24 rounded-[3.5rem] bg-[#fff5f7] backdrop-blur-md cursor-pointer shadow-[0_30px_90px_rgba(183,14,56,0.2)] transition-all border-4 sm:border-8 border-primary/50">
+              <span class="absolute -top-9 right-14 bg-primary text-on-primary text-2xl sm:text-3xl lg:text-4xl font-black px-10 py-4 rounded-full uppercase tracking-wider shadow-xl">
+                Most Popular
+              </span>
+              <div class="flex items-center gap-10 sm:gap-16">
+                <input checked="" class="w-14 h-14 sm:w-20 sm:h-20 text-primary accent-primary cursor-pointer shrink-0" name="pack-bundle" type="radio" value="sixpack"/>
+                <div>
+                  <h4 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#1b1b20]">Taster 6-Pack</h4>
+                  <p class="text-3xl sm:text-4xl lg:text-5xl text-[#4a2e33] font-medium leading-normal mt-3">Weekly treat &amp; lunchbox size</p>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black text-primary block">$7.99</span>
+                <span class="text-3xl sm:text-4xl lg:text-5xl font-black text-primary">$1.33 / pack</span>
+              </div>
+            </label>
+            <!-- Option 3: 24-Pack Case (Best Value) -->
+            <label class="pack-option relative flex items-center justify-between p-12 sm:p-20 lg:p-24 rounded-[3.5rem] bg-white/95 backdrop-blur-md cursor-pointer transition-all hover:bg-white border-4 sm:border-8 border-white hover:border-primary/40 shadow-[0_30px_70px_rgba(183,14,56,0.12)]">
+              <span class="absolute -top-9 right-14 bg-[#1b1b20] text-white text-2xl sm:text-3xl lg:text-4xl font-black px-10 py-4 rounded-full uppercase tracking-wider shadow-xl">
+                Save 20%
+              </span>
+              <div class="flex items-center gap-10 sm:gap-16">
+                <input class="w-14 h-14 sm:w-20 sm:h-20 text-primary accent-primary cursor-pointer shrink-0" name="pack-bundle" type="radio" value="case"/>
+                <div>
+                  <h4 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#1b1b20]">Pantry 24-Pack Case</h4>
+                  <p class="text-3xl sm:text-4xl lg:text-5xl text-[#4a2e33] font-medium leading-normal mt-3">Full monthly stock</p>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black text-[#1b1b20] block">$28.99</span>
+                <span class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#5a2e35]">$1.20 / pack</span>
+              </div>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Serving Rituals & Creative Uses -->
+      <section class="w-full py-36 sm:py-52 md:py-64 bg-[#f2c0c1]">
+        <div class="max-w-[1900px] mx-auto px-6 sm:px-14 lg:px-24">
+          <div class="flex flex-col mb-24 sm:mb-36 max-w-6xl">
+            <span class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-[#a80f33] uppercase tracking-widest mb-6">Serving Rituals</span>
+            <h2 class="text-7xl sm:text-8xl md:text-9xl lg:text-[160px] xl:text-[210px] font-black text-[#1b1b20] tracking-tight leading-[0.95]">3 Delicious Ways to Sip</h2>
+            <p class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#4a2e33] mt-10 leading-[1.3] font-medium">From chilled afternoon treat to weekend sundae floats.</p>
+          </div>
+
+          <!-- Cards Layout -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-14 sm:gap-18">
+            <!-- Card 1 -->
+            <div class="bg-white/95 backdrop-blur-md rounded-[3.5rem] sm:rounded-[5rem] p-12 sm:p-18 shadow-[0_30px_90px_rgba(183,14,56,0.14)] flex flex-col justify-between border-4 sm:border-8 border-white">
+              <div class="w-full h-80 sm:h-96 rounded-[3rem] bg-secondary-container flex items-center justify-center mb-12 text-primary">
+                <span class="material-symbols-outlined text-[120px] sm:text-[160px]" style="font-variation-settings: 'FILL' 1;">sports_bar</span>
+              </div>
+              <div>
+                <span class="text-2xl sm:text-3xl lg:text-4xl font-black uppercase text-primary tracking-wider block mb-5">The Classic</span>
+                <h4 class="text-5xl sm:text-6xl lg:text-7xl font-black text-[#1b1b20] mb-6 leading-tight">Ice Cold Direct Sip</h4>
+                <p class="text-3xl sm:text-4xl lg:text-5xl text-[#3d2529] leading-[1.5] font-normal">
+                  Chill at 4°C, shake vigorously for 10 seconds, pop in the telescopic straw, and enjoy.
+                </p>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white/95 backdrop-blur-md rounded-[3.5rem] sm:rounded-[5rem] p-12 sm:p-18 shadow-[0_30px_90px_rgba(183,14,56,0.14)] flex flex-col justify-between border-4 sm:border-8 border-white">
+              <div class="w-full h-80 sm:h-96 rounded-[3rem] bg-primary-fixed flex items-center justify-center text-primary mb-12">
+                <span class="material-symbols-outlined text-[120px] sm:text-[160px]" style="font-variation-settings: 'FILL' 1;">bakery_dining</span>
+              </div>
+              <div>
+                <span class="text-2xl sm:text-3xl lg:text-4xl font-black uppercase text-primary tracking-wider block mb-5">Dessert Float</span>
+                <h4 class="text-5xl sm:text-6xl lg:text-7xl font-black text-[#1b1b20] mb-6 leading-tight">Vanilla Sundae Float</h4>
+                <p class="text-3xl sm:text-4xl lg:text-5xl text-[#3d2529] leading-[1.5] font-normal">
+                  Pour one carton over two scoops of Madagascar vanilla bean ice cream and top with wafer crumbles.
+                </p>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white/95 backdrop-blur-md rounded-[3.5rem] sm:rounded-[5rem] p-12 sm:p-18 shadow-[0_30px_90px_rgba(183,14,56,0.14)] flex flex-col justify-between border-4 sm:border-8 border-white">
+              <div class="w-full h-80 sm:h-96 rounded-[3rem] bg-secondary-container flex items-center justify-center text-primary mb-12">
+                <span class="material-symbols-outlined text-[120px] sm:text-[160px]" style="font-variation-settings: 'FILL' 1;">blender</span>
+              </div>
+              <div>
+                <span class="text-2xl sm:text-3xl lg:text-4xl font-black uppercase text-primary tracking-wider block mb-5">Morning Boost</span>
+                <h4 class="text-5xl sm:text-6xl lg:text-7xl font-black text-[#1b1b20] mb-6 leading-tight">Berry Power Smoothie</h4>
+                <p class="text-3xl sm:text-4xl lg:text-5xl text-[#3d2529] leading-[1.5] font-normal">
+                  Blend with frozen bananas, rolled oats, and chia seeds for an energizing breakfast shake.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Carton Specifications & Transparency Accordion -->
+      <section id="specs" class="w-full py-36 sm:py-52 md:py-64 bg-[#f2c0c1]">
+        <div class="max-w-[1900px] mx-auto px-6 sm:px-14 lg:px-24">
+          <div class="flex flex-col mb-24 sm:mb-36 max-w-6xl">
+            <span class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-[#a80f33] uppercase tracking-widest mb-6">Purity &amp; Specs</span>
+            <h2 class="text-7xl sm:text-8xl md:text-9xl lg:text-[160px] xl:text-[210px] font-black text-[#1b1b20] tracking-tight leading-[0.95]">Carton Facts &amp; Ingredients</h2>
+          </div>
+          <div class="space-y-12 sm:space-y-16">
+            <!-- Item 1 -->
+            <div class="bg-white/95 backdrop-blur-md rounded-[3.5rem] p-12 sm:p-20 shadow-[0_30px_90px_rgba(183,14,56,0.14)] border-4 sm:border-8 border-white">
+              <button aria-expanded="true" class="spec-toggle w-full flex items-center justify-between text-left cursor-pointer">
+                <span class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#1b1b20] flex items-center gap-8">
+                  <span class="material-symbols-outlined text-primary text-[64px] sm:text-[90px]">package_2</span>
+                  Product Specifications
+                </span>
+                <span class="material-symbols-outlined text-[#4a2e33] spec-arrow transition-transform duration-200 text-[64px] sm:text-[80px]">expand_more</span>
+              </button>
+              <div class="spec-content mt-12 pt-12 border-t-4 border-primary/10 space-y-8 text-3xl sm:text-4xl lg:text-5xl text-[#3d2529]">
+                <div class="flex justify-between py-5 border-b-2 border-primary/10">
+                  <span class="font-black text-[#1b1b20]">Net Content:</span>
+                  <span class="font-medium">200 ml</span>
+                </div>
+                <div class="flex justify-between py-5 border-b-2 border-primary/10">
+                  <span class="font-black text-[#1b1b20]">Packaging:</span>
+                  <span class="font-medium">Aseptic 6-layer carton with paper straw</span>
+                </div>
+                <div class="flex justify-between py-5 border-b-2 border-primary/10">
+                  <span class="font-black text-[#1b1b20]">Shelf Life:</span>
+                  <span class="font-medium">9 months (Ambient unopened)</span>
+                </div>
+                <div class="flex justify-between py-5 border-b-2 border-primary/10">
+                  <span class="font-black text-[#1b1b20]">Best Served:</span>
+                  <span class="font-medium">Chilled at 4°C – 8°C</span>
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="bg-white/95 backdrop-blur-md rounded-[3.5rem] p-12 sm:p-20 shadow-[0_30px_90px_rgba(183,14,56,0.14)] border-4 sm:border-8 border-white">
+              <button aria-expanded="false" class="spec-toggle w-full flex items-center justify-between text-left cursor-pointer">
+                <span class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#1b1b20] flex items-center gap-8">
+                  <span class="material-symbols-outlined text-primary text-[64px] sm:text-[90px]">restaurant</span>
+                  Complete Ingredients List
+                </span>
+                <span class="material-symbols-outlined text-[#4a2e33] spec-arrow transition-transform duration-200 text-[64px] sm:text-[80px]">expand_more</span>
+              </button>
+              <div class="spec-content hidden mt-12 pt-12 border-t-4 border-primary/10 text-3xl sm:text-4xl lg:text-5xl text-[#3d2529] leading-[1.6] font-normal">
+                Standardized Whole Cow’s Milk, Cane Sugar, Milk Solids Non-Fat, Natural Strawberry Fruit Essence &amp; Extracts, Stabilizers (INS 407, INS 412), Emulsifier (INS 471), Mineral (Calcium Carbonate), Vitamins (Retinyl Palmitate - Vit A, Cholecalciferol - Vit D3).
+                <div class="mt-10 text-3xl sm:text-4xl lg:text-5xl font-black text-primary flex items-center gap-5">
+                  <span class="material-symbols-outlined text-[54px] sm:text-[68px]">verified</span>
+                  Allergen Warning: Contains Milk. Certified Gluten-Free.
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="bg-white/95 backdrop-blur-md rounded-[3.5rem] p-12 sm:p-20 shadow-[0_30px_90px_rgba(183,14,56,0.14)] border-4 sm:border-8 border-white">
+              <button aria-expanded="false" class="spec-toggle w-full flex items-center justify-between text-left cursor-pointer">
+                <span class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#1b1b20] flex items-center gap-8">
+                  <span class="material-symbols-outlined text-primary text-[64px] sm:text-[90px]">recycling</span>
+                  Sustainability &amp; Recycling
+                </span>
+                <span class="material-symbols-outlined text-[#4a2e33] spec-arrow transition-transform duration-200 text-[64px] sm:text-[80px]">expand_more</span>
+              </button>
+              <div class="spec-content hidden mt-12 pt-12 border-t-4 border-primary/10 text-3xl sm:text-4xl lg:text-5xl text-[#3d2529] leading-[1.6] font-normal">
+                Our cartons are FSC-certified and 100% recyclable. After enjoying, push the recyclable paper straw into the empty carton and place it directly into your curb-side paper recycling bin.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Proof & Customer Love -->
+      <section id="reviews" class="w-full py-36 sm:py-52 md:py-64 bg-[#f2c0c1]">
+        <div class="max-w-[1900px] mx-auto px-6 sm:px-14 lg:px-24">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-10 mb-24 sm:mb-36">
+            <div>
+              <span class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-[#a80f33] uppercase tracking-widest mb-6 block">Verified Reviews</span>
+              <h2 class="text-7xl sm:text-8xl md:text-9xl lg:text-[160px] xl:text-[210px] font-black text-[#1b1b20] tracking-tight leading-[0.95]">Loved by Berry Fans</h2>
+            </div>
+            <div class="text-left sm:text-right">
+              <div class="flex items-center gap-5 text-primary">
+                <span class="material-symbols-outlined text-[72px] sm:text-[100px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="text-7xl sm:text-8xl lg:text-9xl xl:text-[140px] font-black text-[#1b1b20]">4.9</span>
+              </div>
+              <span class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#5a2e35]">2,418 reviews</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Cards -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 sm:gap-20">
+            <!-- Review 1 -->
+            <div class="bg-white/95 backdrop-blur-md p-12 sm:p-20 lg:p-24 rounded-[3.5rem] sm:rounded-[5rem] shadow-[0_30px_90px_rgba(183,14,56,0.14)] border-4 sm:border-8 border-white flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-10">
+                  <div class="flex items-center gap-8">
+                    <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-secondary-container text-primary font-black flex items-center justify-center text-4xl sm:text-5xl shadow-inner">
+                      CL
+                    </div>
+                    <div>
+                      <h5 class="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1b1b20]">Claire L.</h5>
+                      <span class="text-2xl sm:text-3xl font-bold text-primary flex items-center gap-3 mt-2">
+                        <span class="material-symbols-outlined text-[36px]">verified</span> Verified Buyer
+                      </span>
+                    </div>
+                  </div>
+                  <div class="flex text-primary">
+                    <span class="material-symbols-outlined text-[48px] sm:text-[64px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[48px] sm:text-[64px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[48px] sm:text-[64px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[48px] sm:text-[64px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[48px] sm:text-[64px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                </div>
+                <p class="text-4xl sm:text-5xl lg:text-6xl text-[#2e1d20] leading-[1.5] italic font-normal">
+                  “Tastes exactly like retro melted strawberry sundae ice cream! Not overly sweet or artificial like other flavored milks. My 6-pack vanished in two days.”
+                </p>
+              </div>
+            </div>
+            <!-- Review 2 -->
+            <div class="bg-white/95 backdrop-blur-md p-12 sm:p-20 lg:p-24 rounded-[3.5rem] sm:rounded-[5rem] shadow-[0_30px_90px_rgba(183,14,56,0.14)] border-4 sm:border-8 border-white flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-10">
+                  <div class="flex items-center gap-8">
+                    <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-primary-fixed text-primary font-black flex items-center justify-center text-4xl sm:text-5xl shadow-inner">
+                      MK
+                    </div>
+                    <div>
+                      <h5 class="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1b1b20]">Marcus K.</h5>
+                      <span class="text-2xl sm:text-3xl font-bold text-primary flex items-center gap-3 mt-2">
+                        <span class="material-symbols-outlined text-[36px]">verified</span> Verified Parent
+                      </span>
+                    </div>
+                  </div>
+                  <div class="flex text-primary">
+                    <span class="material-symbols-outlined text-[48px] sm:text-[64px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[48px] sm:text-[64px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[48px] sm:text-[64px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[48px] sm:text-[64px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[48px] sm:text-[64px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                </div>
+                <p class="text-4xl sm:text-5xl lg:text-6xl text-[#2e1d20] leading-[1.5] italic font-normal">
+                  “The fortified Calcium and Vitamin D3 give me peace of mind when packing my kids' daily school lunchbox. They adore the pink carton too.”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Brand Footer -->
+      <footer class="w-full py-36 bg-[#f2c0c1] border-t-8 border-white/40 text-center">
+        <div class="max-w-[1900px] mx-auto px-6 sm:px-14 lg:px-24 flex flex-col items-center gap-8">
+          <div class="flex items-center gap-5">
+            <span class="material-symbols-outlined text-primary text-[72px] sm:text-[96px]">local_drink</span>
+            <span class="text-6xl sm:text-7xl lg:text-8xl font-black uppercase text-primary tracking-widest">Marks Dairy</span>
+          </div>
+          <p class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#5a2e35]">© 2026 Marks Dairy Co. Pure Strawberry Refreshment. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <!-- Sticky Purchase Bar Anchor Spacer -->
+      <div class="h-96 w-full"></div>
+
+    </div>
+  </main>
+
+  <!-- =====================================================================
+       STICKY CHECKOUT FLOATING BAR & NOTIFICATION TOAST
+       ===================================================================== -->
+  <div id="sticky-checkout-bar" class="fixed bottom-10 sm:bottom-16 inset-x-6 max-w-6xl mx-auto z-40 px-12 sm:px-18 py-10 sm:py-12 bg-white rounded-[4rem] shadow-[0_30px_100px_rgba(183,14,56,0.35)] border-4 sm:border-8 border-primary/20">
+    <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-10">
+      <div class="flex flex-col">
+        <span class="text-2xl sm:text-3xl font-black text-[#5a2e35] uppercase tracking-wider">Quick Reorder</span>
+        <div class="flex items-baseline gap-5">
+          <span class="text-6xl sm:text-7xl lg:text-8xl font-black text-primary tracking-tight leading-none" id="bar-price">$7.99</span>
+          <span class="text-3xl sm:text-4xl font-bold text-[#4a2e33]" id="bar-label">Taster 6-Pack</span>
+        </div>
+      </div>
+      <button class="py-7 sm:py-9 px-14 sm:px-20 rounded-full bg-primary text-on-primary text-3xl sm:text-4xl lg:text-5xl font-black shadow-[0_16px_48px_rgba(183,14,56,0.5)] active:scale-95 transition-all flex items-center justify-center gap-5 hover:bg-primary-container" id="sticky-buy-btn">
+        <span class="material-symbols-outlined text-[48px] sm:text-[60px]" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+        Sip Now • Cold Delivery
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Modal (Micro-interaction) -->
+  <div class="fixed top-14 inset-x-6 mx-auto max-w-3xl z-50 bg-[#1b1b20] text-white p-10 sm:p-14 rounded-[3.5rem] shadow-2xl flex items-center gap-8 transform -translate-y-44 opacity-0 transition-all duration-300 pointer-events-none" id="cart-toast">
+    <div class="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-lg">
+      <span class="material-symbols-outlined text-[48px] sm:text-[64px]">check</span>
+    </div>
+    <div class="flex flex-col min-w-0">
+      <span class="text-4xl sm:text-5xl font-black text-white">Carton added to bag!</span>
+      <span class="text-2xl sm:text-3xl text-white/90 truncate mt-1" id="toast-message">Marks Strawberry Shake pack ready for chilled dispatch.</span>
+    </div>
+  </div>
+
+  <!-- 3D Scroll Animation Script (Untouched) -->
+  <script src="script.js"></script>
+
+  <!-- Interactive Storefront Micro-interactions Script -->
+  <script>
+    (function() {
+      'use strict';
+
+      // 1. Nutrition Serving Switcher
+      const btnCarton = document.getElementById('toggle-carton');
+      const btn100ml = document.getElementById('toggle-100ml');
+      const statCalcium = document.getElementById('stat-calcium');
+      const statProtein = document.getElementById('stat-protein');
+      const statCalories = document.getElementById('stat-calories');
+
+      if (btnCarton && btn100ml) {
+        btnCarton.addEventListener('click', () => {
+          btnCarton.className = "px-14 py-7 sm:px-16 sm:py-8 rounded-full bg-primary text-on-primary text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black shadow-md transition-all";
+          btn100ml.className = "px-14 py-7 sm:px-16 sm:py-8 rounded-full text-[#4a2e33] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black transition-all hover:text-primary";
+          if (statCalcium) statCalcium.textContent = "300 mg";
+          if (statProtein) statProtein.textContent = "7.5 g";
+          if (statCalories) statCalories.textContent = "168 kcal";
+        });
+
+        btn100ml.addEventListener('click', () => {
+          btn100ml.className = "px-14 py-7 sm:px-16 sm:py-8 rounded-full bg-primary text-on-primary text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black shadow-md transition-all";
+          btnCarton.className = "px-14 py-7 sm:px-16 sm:py-8 rounded-full text-[#4a2e33] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black transition-all hover:text-primary";
+          if (statCalcium) statCalcium.textContent = "150 mg";
+          if (statProtein) statProtein.textContent = "3.75 g";
+          if (statCalories) statCalories.textContent = "84 kcal";
+        });
+      }
+
+      // 2. Pack Radio Selector updates Sticky Buy Bar
+      const packRadios = document.querySelectorAll('input[name="pack-bundle"]');
+      const barPrice = document.getElementById('bar-price');
+      const barLabel = document.getElementById('bar-label');
+
+      packRadios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+          if (e.target.value === 'single') {
+            if (barPrice) barPrice.textContent = '$1.49';
+            if (barLabel) barLabel.textContent = 'Single 200ml';
+          } else if (e.target.value === 'sixpack') {
+            if (barPrice) barPrice.textContent = '$7.99';
+            if (barLabel) barLabel.textContent = 'Taster 6-Pack';
+          } else if (e.target.value === 'case') {
+            if (barPrice) barPrice.textContent = '$28.99';
+            if (barLabel) barLabel.textContent = 'Pantry 24-Pack';
+          }
+        });
+      });
+
+      // 3. Accordion toggle
+      const toggles = document.querySelectorAll('.spec-toggle');
+      toggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const content = btn.parentElement.querySelector('.spec-content');
+          const arrow = btn.querySelector('.spec-arrow');
+          const isExpanded = !content.classList.contains('hidden');
+
+          if (isExpanded) {
+            content.classList.add('hidden');
+            if (arrow) arrow.style.transform = 'rotate(0deg)';
+          } else {
+            content.classList.remove('hidden');
+            if (arrow) arrow.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+
+      // 4. Delight Cart Notification Toast
+      const toast = document.getElementById('cart-toast');
+      const stickyBuyBtn = document.getElementById('sticky-buy-btn');
+
+      function triggerToast(text) {
+        if (!toast) return;
+        const msg = document.getElementById('toast-message');
+        if (msg && text) msg.textContent = text;
+        toast.classList.remove('-translate-y-44', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+
+        setTimeout(() => {
+          toast.classList.add('-translate-y-44', 'opacity-0');
+          toast.classList.remove('translate-y-0', 'opacity-100');
+        }, 2600);
+      }
+
+      if (stickyBuyBtn) {
+        stickyBuyBtn.addEventListener('click', () => {
+          const selectedPack = document.querySelector('input[name="pack-bundle"]:checked');
+          let packName = 'Marks Strawberry Milk Carton';
+          if (selectedPack) {
+            if (selectedPack.value === 'single') packName = 'Single 200ml Carton';
+            else if (selectedPack.value === 'sixpack') packName = 'Taster 6-Pack';
+            else if (selectedPack.value === 'case') packName = 'Pantry 24-Pack Case';
+          }
+          triggerToast(packName + ' added to your express chilled bag!');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
